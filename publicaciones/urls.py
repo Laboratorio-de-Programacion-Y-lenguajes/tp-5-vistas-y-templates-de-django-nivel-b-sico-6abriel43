@@ -1,5 +1,6 @@
 from django.urls import path
-from . import views
+from.views import InicioView, PublicacionListView, PublicacionDetailView   
+
 
 # TODO: Asignar el namespace de la app.
 # Esto permite usar {% url 'publicaciones:inicio' %} en los templates.
@@ -10,9 +11,9 @@ urlpatterns = [
     #
     # Rutas a implementar:
     #
-    #   URL: ""
-    #   Vista: InicioView
-    #   Nombre: "inicio"
+    path("", InicioView.as_view(), name="inicio"),
+    path("publicaciones/", PublicacionListView.as_view(), name="lista_publicaciones"),
+    path("publicaciones/<int:publicacion_id>/", PublicacionDetailView.as_view(), name="detalle_publicacion"),
     #
     #   URL: "publicaciones/"
     #   Vista: PublicacionListView

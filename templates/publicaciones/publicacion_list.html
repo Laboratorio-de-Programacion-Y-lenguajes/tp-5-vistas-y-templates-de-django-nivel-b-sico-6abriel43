@@ -27,10 +27,10 @@
 {% block content %}
 <h1>Listado de Publicaciones</h1>
 <ul> 
-{%% for post in posts %}
+{% for post in posts %}
 <li>
     <strong> {{post.titulo}} </strong> -
-    <a href=" {% url 'publicaciones:detalle' post.pk %}"> Ver detalle</a>
+    <a href="{% url 'publicaciones:detalle_publicacion' post.pk %}">Ver detalle</a>
 </li>
 {% empty %}
 <li>No hay publicaciones disponibles aún.</li>

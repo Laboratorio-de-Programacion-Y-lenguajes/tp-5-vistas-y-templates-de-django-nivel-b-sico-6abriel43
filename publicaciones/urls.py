@@ -12,8 +12,8 @@ urlpatterns = [
     # Rutas a implementar:
     #
     path("", InicioView.as_view(), name="inicio"),
-    path("publicaciones/", PublicacionListView.as_view(), name="lista_publicaciones"),
-    path("publicaciones/<int:publicacion_id>/", PublicacionDetailView.as_view(), name="detalle_publicacion"),
+    path("listado/", PublicacionListView.as_view(), name="lista_publicaciones"),
+    path("detalle/<int:publicacion_id>/", PublicacionDetailView.as_view(), name="detalle_publicacion"),
     #
     #   URL: "publicaciones/"
     #   Vista: PublicacionListView

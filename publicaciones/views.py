@@ -36,9 +36,8 @@ class InicioView(TemplateView):
 # Pista:
 class PublicacionListView(ListView):
     model = Publicacion
-    context_object_name = "publicaciones/publicacion_list.html"
-    context_object_name = "post"
-
+    template_name = "publicaciones/publicacion_list.html"
+    context_object_name = "posts"
 # ---------------------------------------------------------------------------
 # PublicacionDetailView
 # ---------------------------------------------------------------------------

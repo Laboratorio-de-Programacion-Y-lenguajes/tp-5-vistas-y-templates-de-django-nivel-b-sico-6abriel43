@@ -54,5 +54,7 @@ class PublicacionListView(ListView):
 # Pista:
 class PublicacionDetailView(DetailView):
     model = Publicacion
-    context_object_name = "post"
     template_name = "publicaciones/publicacion_detail.html"
+    context_object_name = "post"
+    pk_url_kwarg = "publicacion_id"
+    

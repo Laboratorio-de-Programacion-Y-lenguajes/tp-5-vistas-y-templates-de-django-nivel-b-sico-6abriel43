@@ -30,7 +30,7 @@
 {% for post in posts %}
 <li>
     <strong> {{post.titulo}} </strong> -
-    <a href="{% url 'publicaciones:detalle_publicacion' post.pk %}">Ver detalle</a>
+    <a href="{% url 'publicaciones:detalle_publicacion' publicacion_id=post.pk %}">Detalle</a>
 </li>
 {% empty %}
 <li>No hay publicaciones disponibles aún.</li>

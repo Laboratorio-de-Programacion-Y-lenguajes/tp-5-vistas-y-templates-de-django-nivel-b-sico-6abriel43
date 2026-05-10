@@ -23,17 +23,22 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %} Portal de Publicaciones Prueba{% endblock %}</title>
+    <title>{% block title %}Portal de Publicaciones{% endblock %}</title>
 </head>
 <body>
-    <nav>
-    <a href="{% url 'publicaciones:inicio' %}">Inicio</a>
-    <a href="{% url 'publicaciones:listado' %}">Listado</a>
-    </nav>
+    <header>
+        <h1>Noticias </h1>
+        <nav>
+            <a href="{% url 'publicaciones:inicio' %}">Inicio</a> | 
+            <a href="{% url 'publicaciones:lista_publicaciones' %}">Publicaciones</a>
+        </nav>
+    </header>
     <hr>
     <main>
-        {% block content %}
-        {% endblock %}
+        {% block content %}{% endblock %}
     </main>
-    </body>
+    <footer>
+        <p>Laboratorio de Programación - 2026</p>
+    </footer>
+</body>
 </html>

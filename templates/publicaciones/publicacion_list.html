@@ -25,15 +25,15 @@
 
 {% extends "base.html" %}
 {% block content %}
-<h1>Listado de Publicaciones</h1>
+<h2>Listado de Publicaciones</h2>
 <ul> 
-{% for post in posts %}
+{% for pub in publicacion_list %}
 <li>
-    <strong> {{post.titulo}} </strong> -
-    <a href="{% url 'publicaciones:detalle_publicacion' publicacion_id=post.pk %}">Detalle</a>
+    <strong>{{ pub.titulo }}</strong> - {{ pub.autor }} ({{ pub.fecha_publicacion|date:"d/m/Y" }})
+    <br>
+    <a href="{% url 'publicaciones:detalle_publicacion' publicacion_id=pub.pk %}">Ver detalle</a>
 </li>
 {% empty %}
-<li>No hay publicaciones disponibles aún.</li>
-{% endfor %}
+<li>No hay publicaciones disponibles aún.</li> {% endfor %}
 </ul>
 {% endblock %}

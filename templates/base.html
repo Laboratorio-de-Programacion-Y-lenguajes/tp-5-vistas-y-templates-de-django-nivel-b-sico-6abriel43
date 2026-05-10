@@ -1,24 +1,3 @@
-<!-- 
-    TODO: Completar el template base del portal.
-
-    Requisitos:
-    - Estructura HTML5 válida (<!DOCTYPE html>, <html>, <head>, <body>)
-    - En <title>: mostrar el nombre del sitio (podés hardcodearlo o usar una variable)
-    - Un <header> visible con el nombre del portal
-    - Una navegación (<nav>) con dos links:
-        - Inicio → {% url 'publicaciones:inicio' %}
-        - Publicaciones → {% url 'publicaciones:lista_publicaciones' %}
-    - Un bloque de contenido para que los templates hijos inserten su HTML:
-        {% block content %}{% endblock %}
-    - Un <footer> simple (puede ser solo un texto)
-
-    Pista para el bloque de contenido:
-        <main>
-            {% block content %}
-            {% endblock %}
-        </main>
--->
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -27,7 +6,7 @@
 </head>
 <body>
     <header>
-        <h1>Noticias </h1>
+        <h1>Mi Portal UNTDF</h1>
         <nav>
             <a href="{% url 'publicaciones:inicio' %}">Inicio</a> | 
             <a href="{% url 'publicaciones:lista_publicaciones' %}">Publicaciones</a>

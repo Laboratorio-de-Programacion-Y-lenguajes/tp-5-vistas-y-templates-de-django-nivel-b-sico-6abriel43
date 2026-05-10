@@ -20,6 +20,7 @@
 
 {% extends "base.html" %}
 {% block content %}
-    <h1> Hola Bienvenido al Portal de Publicaciones </h1>
-    <p> Podes explorar el catalogo y publicar tus propias noticias </p>
+    <h1>{{ titulo }}</h1> 
+    <p>{{ mensaje}}</p>
+    <a href = "{% url 'publicaciones:lista_publicaciones' %}">Ver lista de publicaciones</a>
     {% endblock %}

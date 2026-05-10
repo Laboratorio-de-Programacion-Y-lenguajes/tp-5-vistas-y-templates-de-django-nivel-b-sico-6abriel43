@@ -24,8 +24,9 @@
 -->
 
 {% extends "base.html" %}
+
 {% block content %}
-<h2>Listado de Publicaciones</h2>
+<h1>Listado de Publicaciones</h1>
 <ul> 
 {% for pub in publicacion_list %}
 <li>
@@ -34,6 +35,7 @@
     <a href="{% url 'publicaciones:detalle_publicacion' publicacion_id=pub.pk %}">Ver detalle</a>
 </li>
 {% empty %}
-<li>No hay publicaciones disponibles aún.</li> {% endfor %}
+    <li>No hay publicaciones disponibles aún.</li>
+{% endfor %}
 </ul>
 {% endblock %}
